@@ -54,12 +54,9 @@ Printing the prompt and capturing the user input can be grouped together since c
 
 	//hit from the back because each command dependant on the previous symbol.
 	for(int i = foo.size() -1; i >= 0; i--){
-
-
+	
 		if(isSurroundingSymbol(foo[i])){
-
 			switch(foo[i]){
-
 				case ')':
 					pCount++;
 					if(pCount > 1){
@@ -87,12 +84,10 @@ Printing the prompt and capturing the user input can be grouped together since c
 					if(key == ' '){
 						ignoreSymbols = true;
 						key = '\"';
-
 					}
 					else{
 						ignoreSymbols = false;
 						key = ' ';
-
 					}
 					break;
 
@@ -107,13 +102,9 @@ Printing the prompt and capturing the user input can be grouped together since c
 
 					commandText = convertTestString(commandText);
 					break;
-
+					
 				default:
-
 					break;
-
-
-
 			}
 
 			continue;
@@ -221,8 +212,6 @@ This function parses a command string into a stack of pairs, each pair made up o
 		}
 	}
 	return;
-}
-
 
 <addr/>
 
