@@ -220,9 +220,8 @@ This function parses a command string into a stack of pairs, each pair made up o
 			}
 		}
 	}
-
 	return;
-	}
+}
 
 
 <addr/>
@@ -233,10 +232,9 @@ Here is a simple function that uses fork() to create a child process. Then it us
 
 ---
 
-<addr>
-	
-		
+<addr>	
 	bool executeTest(){
+	
 		char** command = foo->getArgs();
 		
 		struct stat rightarg;
@@ -244,24 +242,19 @@ Here is a simple function that uses fork() to create a child process. Then it us
 		if(stat(command[2], &rightarg) == -1 ){
 			cout << "(False)" << endl;
 			return false;
-
 		}
 		else if(command[1] == "d"){
-
 			if(S_ISDIR(rightarg.st_mode) == true){
 				cout << "(True)" << endl;
 				return true;
 			}
 			else{
-
 				cout << "(False)" << endl;
 				return false;
-
 			}
 		else{
 			cout << "(False)" << endl;
-			return false;
-			
+			return false;		
 		}
 	}
 
