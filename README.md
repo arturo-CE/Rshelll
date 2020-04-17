@@ -14,7 +14,7 @@ This project's main goal is to develop a command shell. This command shell will 
 
 Printing the prompt and capturing the user input can be grouped together since capturing an input is dependent on displaying the user a prompt. The inputs will be captured using bash scripts that call our classes and pass along the user input. In order to execute the commands passed, the string will be parsed into Command objects and placed into a list provided by the STL. The list will then be passed to the execute function in the Execp_Shell class which will have a List_Command serving as the head of the command chain. The Execvp_Shell will then call on the List_Command to use Parse_Execvp to parse the commands. List_Command will then use the execute(Base_Command*) function to execute the commands that it has in its commandList. To accomplish this, the List_Command will use the fork,execvp, and waitpid functions to execute the command. We will use the composite design pattern to code the shell.
 
-**Diagram:**<br/>
+## **Diagram:**<br/>
 
 ![image](https://user-images.githubusercontent.com/61763318/79528241-531cec00-801e-11ea-8a40-006eb3449bfc.png)
 
@@ -36,7 +36,7 @@ Printing the prompt and capturing the user input can be grouped together since c
      * **Pipe_Command** : Class will be able to take the outputs of one program and pass it in as an input to another program. Must be able to handle multiple pipe calls.
      * **Redirection_Command_Base** : Class will use functionality from the Parse_Redirection class and have its own execute function of type bool.
 
-**Prototypes/Research:**<br/>
+## **Prototypes/Research:**<br/>
 <br/>
 
 <addr>
