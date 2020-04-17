@@ -2,8 +2,8 @@
 **Project Information:**<br/>
 
 Fall 2019<br/>
-Arturo Alvarado - 861279603<br/>
-Patrick Fenn - 862152988<br/>
+Arturo Alvarado 
+Patrick Fenn 
 
 **Introduction:**<br/>
 
