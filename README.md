@@ -2,8 +2,8 @@
 **Project Information:**<br/>
 
 Fall 2019<br/>
-Arturo Alvarado 
-Patrick Fenn 
+- Arturo Alvarado 
+- Patrick Fenn 
 
 **Introduction:**<br/>
 
