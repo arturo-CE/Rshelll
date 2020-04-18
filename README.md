@@ -232,6 +232,6 @@ Here is a simple function that uses fork() to create a child process. Then it us
 
 <addr/>
 
-Here is a simple function that uses the stat() function as well as the S_ISDIR function. It first checks to see if the path is valid using the stat() command. If it does not return a -1 the command will then be checked using the S_ISDIR function to see if it is an existing directory. Using the above logic, we can extend the flag check to include a check for the "-f" and "-e" flags. We will be adding another function S_ISREG that will allow us to check to see if it a regular file. 
+Here is a simple function that uses the **stat()** function as well as the **S_ISDIR** function. It first checks to see if the path is valid using the stat() command. If it does not return a -1 the command will then be checked using the S_ISDIR function to see if it is an existing directory. Using the above logic, we can extend the flag check to include a check for the "-f" and "-e" flags. We will be adding another function **S_ISREG** that will allow us to check to see if it a regular file. 
 
 
