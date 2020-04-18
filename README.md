@@ -1,4 +1,4 @@
-# CS 100 Programming Project
+# Software Construction: Programming Project
 **Project Information:**<br/>
 
 Fall 2019<br/>
@@ -76,7 +76,6 @@ Printing the prompt and capturing the user input can be grouped together since c
 					else{
 						commandText = foo[i] + commandText;
 					}
-
 					lc = commandText;
 					break;
 
@@ -99,7 +98,6 @@ Printing the prompt and capturing the user input can be grouped together since c
 				case '[':
 					ignoreSymbols = false;
 					key = ' ';
-
 					commandText = convertTestString(commandText);
 					break;
 					
@@ -108,14 +106,10 @@ Printing the prompt and capturing the user input can be grouped together since c
 			}
 
 			continue;
-
-
 		}
 		if(!ignoreSymbols && isConnectingSymbol(foo[i])){
-
 			if(lc != ""){
-
-
+			
 				lc = foo[i] + lc;
 				commands.push( make_pair('(', lc) );
 				lc = commandText = "";
@@ -124,7 +118,6 @@ Printing the prompt and capturing the user input can be grouped together since c
 				}
 				continue;
 			}
-
 			switch(foo[i]){
 				case '|':
 					//mark the |, and subtract 1 for the extra symbol
@@ -143,34 +136,25 @@ Printing the prompt and capturing the user input can be grouped together since c
 					//mark the ;
 					commands.push( make_pair(foo[i], commandText) );
 					break;
-
-
+					
 				default:
-
 					break;
 			}
 			commandText = "";
-
 			continue;
 		}
-
 		JUMP:		
 		commandText = foo[i] + commandText;
-
-
-
 	}
 	if(commandText.length() > 1){
 		if(lc != ""){
 			commands.push( make_pair('(', lc) );
 		}
 		else commands.push( make_pair(';', commandText) );
-
 	}
 	return commands;
-
 	}
-
+	
 <addr/>
 
 This function parses a command string into a stack of pairs, each pair made up of the associated connecting symbol and its command string. Starting from the end of the string was essential because each command relies on the previous connecting symbol. Two separate switch statements were utilized to discern between connecting symbols ";&|" and surrounding symbols "()"[]". The resulting stack's objects are then passed into the cStringify() to convert it into something compatible with execvp. One difficulty was tracking the nested parenthesis, which was accomplished by using a counter.
