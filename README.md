@@ -199,7 +199,7 @@ This function parses a command string into a stack of pairs, each pair made up o
 
 <addr/>
 
-Here is a simple function that uses fork() to create a child process. Then it uses execvp to exectute a command on the child process. Waitpid is used to check if the command executed successfully. Re-using the above logic, we can create further logic to determine when to call the next command based on the connecting symbols and the use of waitpid(). 
+Here is a simple function that uses **fork()** to create a child process. Then it uses **execvp()** to exectute a command on the child process. **Waitpid()** is used to check if the command executed successfully. Re-using the above logic, we can create further logic to determine when to call the next command based on the connecting symbols and the use of waitpid(). 
 
 <br/>
 
