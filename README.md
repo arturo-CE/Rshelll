@@ -204,10 +204,9 @@ Here is a simple function that uses fork() to create a child process. Then it us
 <br/>
 
 ---
-
 <addr>	
-	bool executeTest(){
 	
+	bool executeTest(){
 		char** command = foo->getArgs();
 		
 		struct stat rightarg;
